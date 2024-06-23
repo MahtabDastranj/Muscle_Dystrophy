@@ -71,7 +71,7 @@ with mp_hands.Hands(min_detection_confidence=0.8, min_tracking_confidence=0.5) a
         # Set flag to true
         image.flags.writeable = True
 
-        # RGB 2 BGR
+        # RGB to BGR
         image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
 
         # Detections
