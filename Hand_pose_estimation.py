@@ -12,7 +12,7 @@ with mp_hands.Hands(min_detection_confidence=0.8, min_tracking_confidence=0.5) a
     while cap.isOpened():
         ret, frame = cap.read()
 
-        # BGR 2 RGB
+        # BGR to RGB
         image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
         # Flip on horizontal
@@ -49,14 +49,15 @@ with mp_hands.Hands(min_detection_confidence=0.8, min_tracking_confidence=0.5) a
 cap.release()
 cv2.destroyAllWindows()
 # Output images
-os.mkdir('Output Results')
+path = r'E:\AUT\6TH\rehabilation\code\Muscle_Dystrophy\Output Results'
+if not os.path.exists(path) or not os.path.isdir(path):
+    os.makedirs(path)
 cap = cv2.VideoCapture(0)
 
 with mp_hands.Hands(min_detection_confidence=0.8, min_tracking_confidence=0.5) as hands:
     while cap.isOpened():
         ret, frame = cap.read()
 
-        # BGR to RGB
         image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
         # Flip on horizontal
