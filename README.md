@@ -1,2 +1,2 @@
 # Muscle_Dystrophy
- project for rehabilation course
+Final project for rehabilation course
